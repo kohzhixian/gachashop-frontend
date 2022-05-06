@@ -1,0 +1,32 @@
+body{
+    background-color: lightblue;
+}
+
+.loginDiv{
+    padding: 1%;
+
+}
+
+input[type=text], input[type=password]{
+    width: 100%;
+    margin-top: 0.625rem;
+    display: inline-block;
+    padding: 0.75rem;
+    border: 2px solid green;
+    box-sizing: border-box;
+}
+
+button{
+    padding: 0.9375rem;
+    cursor: pointer;
+    margin-top: 0.625rem;
+}
+
+.regButton{
+    margin-left: 5%;
+}
+
+.loginForm{
+    margin-left: 30%;
+    margin-right: 30%;
+}

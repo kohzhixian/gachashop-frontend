@@ -1,8 +1,13 @@
 import './App.css';
+import LoginPage from './pages/loginPage.js'
+
 
 function App() {
   return (
-    <div>HELLO </div>
+    <div>
+      <LoginPage/>
+      
+    </div>
   );
 }
 
