@@ -1,4 +1,4 @@
-function adminMainPage(){
+function AdminMainPage(){
     return(
         <div>
             admin main page
@@ -6,4 +6,4 @@ function adminMainPage(){
     )
 }
 
-export default adminMainPage;
+export default AdminMainPage;

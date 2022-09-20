@@ -1,0 +1,138 @@
+.main_content{
+    display: flex;
+    flex-direction: column;
+}
+
+.top_section{
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 20%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.search_container{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+}
+
+.search_bar{
+    width: 40%;
+}
+
+.search_button{
+    width: 3%;
+    text-align: center;
+    padding-top: 0.8rem;
+    padding-left: 0.5rem;
+}
+
+.shopping_icons{
+    width: 57%;
+    text-align: right;
+    padding-right: 5%;
+}
+
+/* =========================== END OF TOP SECTION =========================================*/
+
+.middle_section{
+    height: 60rem;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.middle_firstchild{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidelist{
+    width: 80%;
+}
+
+.first_sub_list{
+    list-style: none;
+    font-size: 2.5rem;
+    border-radius: 15px 15px 0 0;
+    width: 56%;
+}
+
+.first_sub_list:hover{
+    background-color: grey;
+    
+}
+
+.sub_list{
+    list-style: none;
+    font-size: 2.5rem;
+    width: 56%;
+    
+}
+
+.sub_list:hover{
+    background-color: grey;
+}
+
+.last_sub_list{
+    list-style: none;
+    font-size: 2.5rem;
+    border-radius: 0 0 15px 15px;
+    width: 56%;
+}
+
+.last_sub_list:hover{
+    background-color: grey;
+}
+
+.middle_secondchild{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.tab_div{
+    width: 100%;
+}
+
+
+/* =========================== END OF MIDDLE SECTION =========================================*/
+
+.bottom_section{
+
+    height: 15rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom_firstchild{
+    width: 33.3%;
+}
+
+.bottom_secondchild{
+
+    width: 33.3%;
+}
+
+.bottom_thirdchild{
+
+    width: 33.3%;
+}
+
+.product_image{
+    padding: 0.5rem;
+    height: 14rem;
+    width: 97%;
+}

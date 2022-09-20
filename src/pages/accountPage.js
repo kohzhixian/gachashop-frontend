@@ -1,4 +1,4 @@
-function accountPage(){
+function AccountPage(){
     return(
         <div>
             account page
@@ -6,4 +6,4 @@ function accountPage(){
     )
 }
 
-export default accountPage;
+export default AccountPage;

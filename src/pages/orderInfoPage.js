@@ -1,9 +1,14 @@
-function orderInfoPage(){
+import React from 'react'
+import {useParams} from 'react-router-dom'
+
+
+function OrderInfoPage(){
+    
     return(
         <div>
-            order info page
+            ORDER PAGE
         </div>
     )
 }
 
-export default orderInfoPage;
+export default OrderInfoPage;

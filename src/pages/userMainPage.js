@@ -1,7 +1,12 @@
-function userMainPage(){
+import React from "react";
+import {useParams} from "react-router-dom"
+
+function UserMainPage(){
+
+    var {username} = useParams();
     return(
-        <div>user main page</div>
-    )
+        <div>{username}'s PAGE</div>
+    );
 }
 
-export default userMainPage;
+export default UserMainPage;

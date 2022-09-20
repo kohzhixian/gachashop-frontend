@@ -1,4 +1,4 @@
-function individualItemPage(){
+function IndividualItemPage(){
     return(
         <div>
             individual item page
@@ -6,4 +6,4 @@ function individualItemPage(){
     )
 }
 
-export default individualItemPage;
+export default IndividualItemPage;
