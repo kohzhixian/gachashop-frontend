@@ -1,0 +1,33 @@
+.tabs {  
+  display: flex;  
+  text-align: center;
+}
+.tab {  
+  color: white;
+  width: 100%;
+  background: darkblue; 
+  padding: 2em;  
+  border: none;
+  list-style-type: none;
+}
+.tab:not(:last-child) {
+  border-right: 1px solid steelblue;  
+}
+.tab.active {
+  background: steelblue;
+  font-weight: bold;
+}
+.panel {
+  display: none;
+  background-color: #eaeaea;
+
+}
+.panel.active {
+  display: block;
+}
+
+.tab_image{
+  width: 99%;
+  height: 53.4rem;
+  padding: 0.5rem;
+}

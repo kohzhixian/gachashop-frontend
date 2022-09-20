@@ -1,0 +1,3 @@
+React Route and useParams (remember to use caps when creating component functions)
+https://dev.to/salehmubashar/react-router-dom-36a2
+https://www.youtube.com/watch?v=UjHT_NKR_gU

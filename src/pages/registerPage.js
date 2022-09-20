@@ -1,4 +1,4 @@
-function registerPage(){
+function RegisterPage(){
     return(
         <div>
             register page
@@ -6,4 +6,4 @@ function registerPage(){
     )
 }
 
-export default registerPage;
+export default RegisterPage;
