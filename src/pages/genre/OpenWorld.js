@@ -1,7 +1,8 @@
+import Header from "../../components/Header";
 function OpenWorld(){
     return (
         <div>
-            OPEN World
+            <Header />
         </div>
     )
 }
