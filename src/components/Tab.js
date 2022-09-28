@@ -15,20 +15,15 @@ const Tabs = () => {
           className={`tab ${checkActive(1, "active")}`}
           onClick={() => handleClick(1)}
         >
-          Tab 1
+          Most Popular Games
         </li>
         <li
           className={`tab ${checkActive(2, "active")}`}
           onClick={() => handleClick(2)}
         >
-          Tab 2
+          Hot Deals
         </li>
-        <li
-          className={`tab ${checkActive(3, "active")}`}
-          onClick={() => handleClick(3)}
-        >
-          Tab 3
-        </li>
+      
       </div>    
       <div className="panels">
         <div className={`panel ${checkActive(1, "active")}`}>
@@ -36,9 +31,6 @@ const Tabs = () => {
         </div>
         <div className={`panel ${checkActive(2, "active")}`}>
           <img className={`tab_image`}src={testimage2} alt="testimage2" />
-        </div>
-        <div className={`panel ${checkActive(3, "active")}`}>
-          <img className={`tab_image`}src={testimage3} alt="testimage3" />
         </div>
       </div>  
     </>
