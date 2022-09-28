@@ -1,7 +1,8 @@
+import Header from "../../components/Header";
 function VisualNovel(){
     return(
         <div>
-            VISUAL Novel
+            <Header />
         </div>
     )
 }

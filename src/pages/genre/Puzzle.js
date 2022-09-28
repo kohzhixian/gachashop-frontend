@@ -1,7 +1,8 @@
+import Header from "../../components/Header";
 function Puzzle(){
     return (
         <div>
-            PUZZLW
+            <Header />
         </div>
     )
 }

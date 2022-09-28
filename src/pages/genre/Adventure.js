@@ -1,7 +1,8 @@
+import Header from "../../components/Header";
 function Adventure(){
     return (
         <div>
-            ADVENTURE
+            <Header />
         </div>
     )
 }

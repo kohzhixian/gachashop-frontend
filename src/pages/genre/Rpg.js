@@ -1,7 +1,8 @@
+import Header from "../../components/Header";
 function Rpg(){
     return (
         <div>
-            RPG
+            <Header />
         </div>
     )
 }

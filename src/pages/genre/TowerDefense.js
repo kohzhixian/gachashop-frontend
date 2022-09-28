@@ -1,7 +1,8 @@
+import Header from "../../components/Header";
 function TowerDefense(){
     return(
         <div>
-            TOWER Defense
+            <Header />
         </div>
     )
 }
