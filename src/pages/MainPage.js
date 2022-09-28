@@ -1,4 +1,5 @@
 import classes from '../css/MainPage.module.css'
+import Header from '../components/Header'
 import {FaSearch} from 'react-icons/fa'
 import {FaShoppingCart} from 'react-icons/fa'
 import {useState} from 'react'
@@ -13,28 +14,7 @@ function MainPage(){
     const [activeTab, setActiveTab] = useState("tab1");
     return (
       <div className={classes.main_content}>
-        <div className={classes.top_section}>
-            <div className={classes.logo}>
-                GACHASHOP
-            </div>
-            <div className={classes.search_container}>
-                <div className={classes.search_bar}>
-                    <input type="text" placeholder="Search..."></input>
-                </div>
-                <div className={classes.search_button}>
-                    <FaSearch size={35}/>
-                </div>
-                <div className={classes.msg_icons}>
-                    <div className={classes.welcomeMsg}>
-                        WELCOME NAME
-                    </div>
-                    <div className={classes.shoppingIcons}>
-                        <FaShoppingCart size={20} />
-                    </div>
-                </div>
-                
-            </div>
-        </div>
+        <Header />
         <div className={classes.middle_section}> 
             <div className={classes.middle_firstchild}>
                 <div className={classes.sidelist}>
