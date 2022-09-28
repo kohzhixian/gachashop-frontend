@@ -30,3 +30,19 @@
     padding-top: 0.8rem;
     padding-left: 0.5rem;
 }
+
+.msg_icons{
+    width: 57%;
+    display: flex;
+    flex-direction: row;
+}
+
+.welcomeMsg{
+    width: 70%;
+    text-align: center;
+}
+
+.shoppingIcons{
+    width: 30%;
+    text-align: center;
+}

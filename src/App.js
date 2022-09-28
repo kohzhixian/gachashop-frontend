@@ -7,6 +7,13 @@ import ErrorPage from "./pages/ErrorPage";
 import MainPage from "./pages/MainPage";
 import OrderInfoPage from "./pages/OrderInfoPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import ActionPage from "./pages/genre/Action"
+import AdventurePage from "./pages/genre/Adventure"
+import OpenWorldPage from "./pages/genre/OpenWorld"
+import PuzzlePage from "./pages/genre/Puzzle"
+import RpgPage from "./pages/genre/Rpg"
+import TowerDefensePage from "./pages/genre/TowerDefense"
+import VisualNovelPage from "./pages/genre/VisualNovel"
 
 function App() {
   return (
@@ -32,6 +39,13 @@ function App() {
           <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<RegisterPage />} />
           <Route path="aboutus" element={<AboutUsPage />} />
+          <Route path="action" element={<ActionPage />} />
+          <Route path="adventure" element={<AdventurePage />} />
+          <Route path="openworld" element={<OpenWorldPage />} />
+          <Route path="puzzle" element={<PuzzlePage />} />
+          <Route path="rpg" element={<RpgPage />} />
+          <Route path="towerdefense" element={<TowerDefensePage />} />
+          <Route path="visualnovel" element={<VisualNovelPage />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
