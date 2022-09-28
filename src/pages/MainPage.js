@@ -1,5 +1,6 @@
 import classes from '../css/MainPage.module.css'
 import {FaSearch} from 'react-icons/fa'
+import {FaShoppingCart} from 'react-icons/fa'
 import {useState} from 'react'
 import Tabs from '../components/Tab'
 import testimage4 from '../Images/testimage4.png'
@@ -23,8 +24,13 @@ function MainPage(){
                 <div className={classes.search_button}>
                     <FaSearch size={35}/>
                 </div>
-                <div className={classes.shopping_icons}>
-                    SHOPPING ICONS
+                <div className={classes.msg_icons}>
+                    <div className={classes.welcomeMsg}>
+                        WELCOME NAME
+                    </div>
+                    <div className={classes.shoppingIcons}>
+                        <FaShoppingCart size={20} />
+                    </div>
                 </div>
                 
             </div>
@@ -33,13 +39,13 @@ function MainPage(){
             <div className={classes.middle_firstchild}>
                 <div className={classes.sidelist}>
                     <ul>
-                        <li className={classes.first_sub_list}>ITEM 1</li>
-                        <li className={classes.sub_list}>ITEM 1</li>
-                        <li className={classes.sub_list}>ITEM 1</li>
-                        <li className={classes.sub_list}>ITEM 1</li>
-                        <li className={classes.sub_list}>ITEM 1</li>
-                        <li className={classes.sub_list}>ITEM 1</li>
-                        <li className={classes.last_sub_list}>ITEM 1</li>
+                        <li className={classes.first_sub_list}>Action</li>
+                        <li className={classes.sub_list}>Adventure</li>
+                        <li className={classes.sub_list}>RPG</li>
+                        <li className={classes.sub_list}>Open World</li>
+                        <li className={classes.sub_list}>Puzzle</li>
+                        <li className={classes.sub_list}>Tower Defense</li>
+                        <li className={classes.last_sub_list}>Visual Novel</li>
                     </ul>
                 </div>
             </div>
