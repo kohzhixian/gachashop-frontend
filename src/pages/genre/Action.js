@@ -1,9 +1,11 @@
 import Header from "../../components/Header";
+import GenreListLayout from "../../components/GenreListLayout";
 function Action(){
     return (
-        <div>
+        <>
             <Header />
-        </div>
+            <GenreListLayout />
+        </>
     )
 }
 
