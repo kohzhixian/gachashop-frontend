@@ -1,0 +1,29 @@
+.parent{
+    border: 1px solid black;
+    height: 75rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.firstChild{
+    border: 1px solid black;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondChild{
+    border: 1px solid black;
+    width: 80%;
+}
+
+.genre_header{
+    padding-left: 1rem;
+}
+
+.genre_content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

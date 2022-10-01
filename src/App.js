@@ -1,11 +1,9 @@
 import classes from "./css/App.module.css";
 import LoginPage from "./pages/LoginPage.js";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import UserMainPage from "./pages/UserMainPage";
 import RegisterPage from "./pages/RegisterPage";
 import ErrorPage from "./pages/ErrorPage";
 import MainPage from "./pages/MainPage";
-import OrderInfoPage from "./pages/OrderInfoPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ActionPage from "./pages/genre/Action"
 import AdventurePage from "./pages/genre/Adventure"
@@ -33,7 +31,7 @@ function App() {
         </Link>
       </nav>
       <Routes>
-        <Route exact path="/" element={<MainPage />} />
+        <Route exact path="/" element={<ActionPage />} />
         <Route path="/gachashop">
           <Route index element={<MainPage />} />
           <Route path="login" element={<LoginPage />} />

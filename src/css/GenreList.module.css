@@ -1,0 +1,37 @@
+.sidelist{
+    width: 80%;
+}
+
+.first_sub_list{
+    list-style: none;
+    font-size: 1.5rem;
+    border-radius: 15px 15px 0 0;
+    width: 75%;
+}
+
+.first_sub_list:hover{
+    background-color: grey;
+    
+}
+
+.sub_list{
+    list-style: none;
+    font-size: 1.5rem;
+    width: 75%;
+    
+}
+
+.sub_list:hover{
+    background-color: grey;
+}
+
+.last_sub_list{
+    list-style: none;
+    font-size: 1.5rem;
+    border-radius: 0 0 15px 15px;
+    width: 75%;
+}
+
+.last_sub_list:hover{
+    background-color: grey;
+}
