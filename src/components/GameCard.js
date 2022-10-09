@@ -4,21 +4,19 @@ import epicseven from '../Images/epic seven.jpg';
 const GameCard = (props) => {
   let { gameName, gameGenre } = props;
 
-  // to be removed
-  gameName = 'Epic Seven';
-  gameGenre = 'Action';
+
 
   return (
     <div className={classes.gamecard_div}>
       <div className={classes.img_div}>
-        <img className={classes.game_image} src={epicseven} alt="epic seven" />
+        <img className={classes.game_image} src={props.img} alt="game_image" />
       </div>
       <div className={classes.game_description}>
         <p>
-          <b>Game Name: {gameName}</b>
+          <b>Game Name: {props.game_name}</b>
         </p>
         <p>
-          <b>Genre: {gameGenre}</b>
+          <b>Genre: {props.genre}</b>
         </p>
       </div>
     </div>
