@@ -1,6 +1,5 @@
 .gamecard_div{
     width: 20%;
-    height: 30vh;
     margin: 1rem 1rem 1rem 1rem;
     border: solid black;
 }
@@ -12,6 +11,7 @@
 .game_description{
     height: 30%;
     text-align: center;
+    overflow-wrap: break-word;
 }
 
 .game_image{

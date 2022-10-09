@@ -5,15 +5,9 @@ import RegisterPage from './pages/registerPage';
 import ErrorPage from './pages/ErrorPage';
 import MainPage from './pages/MainPage';
 import AboutUsPage from './pages/AboutUsPage';
-import ActionPage from './pages/genre/Action';
-import AdventurePage from './pages/genre/Adventure';
-import OpenWorldPage from './pages/genre/OpenWorld';
-import PuzzlePage from './pages/genre/Puzzle';
-import RpgPage from './pages/genre/Rpg';
-import TowerDefensePage from './pages/genre/TowerDefense';
-import VisualNovelPage from './pages/genre/VisualNovel';
 import Header from './components/Header';
 import Genre from './pages/Genre';
+import OrderInfoPage from './pages/orderInfoPage'
 
 function App() {
   return (
@@ -41,13 +35,7 @@ function App() {
             <Route path="login" element={<LoginPage />} />
             <Route path="register" element={<RegisterPage />} />
             <Route path="aboutus" element={<AboutUsPage />} />
-            {/* <Route path="action" element={<ActionPage />} />
-            <Route path="adventure" element={<AdventurePage />} />
-            <Route path="openworld" element={<OpenWorldPage />} />
-            <Route path="puzzle" element={<PuzzlePage />} />
-            <Route path="rpg" element={<RpgPage />} />
-            <Route path="towerdefense" element={<TowerDefensePage />} />
-            <Route path="visualnovel" element={<VisualNovelPage />} /> */}
+            <Route path="orderinfopage" element={<OrderInfoPage />} />
             <Route path="games/:genre" element={<Genre />} />
           </Route>
           <Route path="*" element={<ErrorPage />} />

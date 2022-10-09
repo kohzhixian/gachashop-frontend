@@ -1,12 +1,19 @@
 import React from 'react'
-import {useParams} from 'react-router-dom'
+import address from "../data/Address_Data"
 
 
 function OrderInfoPage(){
+
+    const [firstAddress] = address;
+    const {addressDetails: {blk, street_name}, postalcode} = firstAddress;
+    console.log(blk)
+    console.log(street_name)
+    console.log(postalcode)
+
     
     return(
         <div>
-            ORDER PAGE
+            <h1></h1>
         </div>
     )
 }
