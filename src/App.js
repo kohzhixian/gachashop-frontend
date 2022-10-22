@@ -1,13 +1,13 @@
 import classes from './css/App.module.css';
-import LoginPage from './pages/loginPage.js';
+import LoginPage from './pages/LoginPage.js';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import RegisterPage from './pages/registerPage';
+import RegisterPage from './pages/RegisterPage';
 import ErrorPage from './pages/ErrorPage';
 import MainPage from './pages/MainPage';
 import AboutUsPage from './pages/AboutUsPage';
 import Header from './components/Header';
 import Genre from './pages/Genre';
-import OrderInfoPage from './pages/orderInfoPage'
+import OrderInfoPage from './pages/OrderInfoPage'
 
 function App() {
   return (

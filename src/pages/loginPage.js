@@ -1,85 +1,67 @@
-import { useState } from 'react';
-import classes from '../css/loginPage.module.css'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from "react";
+import Button from "../components/UI/Button";
+import Card from "../components/UI/Card";
+import ErrorModal from "../components/UI/ErrorModal";
 
+import classes from "../css/LoginPage.module.css";
 
-function LoginPage(){
+const LoginPage = props => {
 
-    const [errorMsg, setErrorMsg] = useState({});
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState();
 
-    const data = [
-        {
-            username: "admin",
-            password: "password"
-        },
-        {
-            username: "user",
-            password: "password"
+    const userHandleChange = e => {
+        setUsername(e.target.value)
+    }
+
+    const pwHandleChange = e => {
+        setPassword(e.target.value)
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        if(username.trim().length === 0){
+            setError({
+                title: "All fields must be entered",
+                message: "Username cannot be empty"
+            })
+            return;
         }
-    ];
-
-    const errors = {
-        username: "invalid username",
-        password: "invalid password"
-    };
-
-    
-    const handleSubmit = (event) => {
-        //prevent page reload    
-        event.preventDefault();
-
-        var {username, password} = document.forms[0];
-
-        //find user login info
-        const userData = data.find((user) => user.username === username.value);
-
-        //compare userinfo
-        if(userData){
-            if(userData.password !== password.value) {
-                setErrorMsg({name: "password", message: errors.password});
-            }else{
-                setIsSubmitted(true);
-            }
-        }else{
-            setErrorMsg({name: "username", message: errors.username})
+        if(password.trim().length < 8){
+            setError({
+                title: "All fields must be entered",
+                message: "Password cannot be less than 8 character"
+            })
+            return;
         }
-    };
+    }
 
-    const renderErrorMsg = (name) =>
-        name === errorMsg.name && (
-            <div>{errorMsg.message}</div>
-        )
+    const errorHandler = () => {
+        setError(null);
+    }
 
-    const renderLoginForm = (
-        <div className={classes.loginDiv}>
-        {/*By assigning handlesubmit function to onsubmit property of form, 
-            the handlesubmit() is triggered everytime input type of "submit" is clicked*/}
-            <form className={classes.loginForm} onSubmit={handleSubmit}>
-                <label>Username: </label>
-                <input type="text" placeholder="Enter username" name="username" required /> 
-                {renderErrorMsg("username")}
-                <label>Password</label>
-                <input type="password" placeholder="Enter password" name="password" required />
-                {renderErrorMsg("password")}
-                <input type="submit" value="Login"/>
-                <input type="submit" value="Register" className={classes.regButton}/>
-
-                
-                
-            </form>
-        </div>
-    )
-    var navigate = useNavigate();
-    return(
+    return (
         <div>
-            {isSubmitted? <div>User is successfully logged in</div> : renderLoginForm}
-            <button onClick={()=>{
-                navigate("/register")
-            }}>TEST REGISTER</button>
+            {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler}/>}
+            <Card className={classes.input}>
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="Username" value={username}>Username:</label>
+                    <input type="text" onChange={userHandleChange}></input>
+                    <label htmlFor="Password">Password:</label>
+                    <input type="password" onChange={pwHandleChange} value={password}></input>
+                    <Button type="submit">Login</Button>
+                    <Button>Register</Button>
+                </form>
+            </Card>
         </div>
-        
     )
 }
 
 export default LoginPage;
+
+
+
+
+
+
