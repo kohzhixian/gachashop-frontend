@@ -5,15 +5,6 @@ import Games from '../data/Game_Data'
 import GenreList from '../components/GenreList';
 import classes from '../css/GenreListLayout.module.css';
 
-function createGameCard(games){
-  return <GameCard 
-    key={games.gameID}
-    img={games.img}
-    game_name={games.game_name}
-    genre={games.genre}
-
-  />
-}
 
 const Genre = () => {
   return (
