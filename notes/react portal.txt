@@ -1,0 +1,8 @@
+To render a portal, add a div in index.html that you want to portal your component
+
+import ReactDOM from 'react-dom'
+
+call ReactDOM.createPortal(function, location of id);
+
+
+

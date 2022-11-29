@@ -1,0 +1,4 @@
+create a const reducer with state and action params
+const cartReducer = (state, action) => {
+        
+}
