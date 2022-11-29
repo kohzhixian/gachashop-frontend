@@ -1,0 +1,13 @@
+create a context using React.createContext with some default values/functions
+
+const cartContext = React.createContext({
+    //default states
+})
+
+create a provider  //A provider manage the context data and provide context to all components that wants access to it.
+
+const CartProvider = props => {
+    
+}
+
+import context to components that wants to use it

@@ -7,39 +7,39 @@ function GenreList() {
       <div className={classes.sidelist}>
         <ul>
           <li className={classes.first_sub_list}>
-            <Link to="/gachashop/games/action" className={classes.genre_link}>
+            <Link to="/games/action" className={classes.genre_link}>
               Action
             </Link>
           </li>
           <li className={classes.sub_list}>
             <Link
-              to="/gachashop/games/adventure"
+              to="/games/adventure"
               className={classes.genre_link}
             >
               Adventure
             </Link>
           </li>
           <li className={classes.sub_list}>
-            <Link to="/gachashop/games/rpg" className={classes.genre_link}>
+            <Link to="/games/rpg" className={classes.genre_link}>
               Rpg
             </Link>
           </li>
           <li className={classes.sub_list}>
             <Link
-              to="/gachashop/games/openworld"
+              to="/games/openworld"
               className={classes.genre_link}
             >
               Open World
             </Link>
           </li>
           <li className={classes.sub_list}>
-            <Link to="/gachashop/games/puzzle" className={classes.genre_link}>
+            <Link to="/games/puzzle" className={classes.genre_link}>
               Puzzle
             </Link>
           </li>
           <li className={classes.sub_list}>
             <Link
-              to="/gachashop/games/towerdefense"
+              to="/games/towerdefense"
               className={classes.genre_link}
             >
               Tower Defense
@@ -47,7 +47,7 @@ function GenreList() {
           </li>
           <li className={classes.last_sub_list}>
             <Link
-              to="/gachashop/games/visualnovel"
+              to="/games/visualnovel"
               className={classes.genre_link}
             >
               Visual Novel
