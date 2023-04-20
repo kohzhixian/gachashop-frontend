@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import '../css/Tab.css';
-import testimage1 from '../Images/testimage1.png'
-import testimage2 from '../Images/testimage2.png'
-import testimage3 from '../Images/testimage3.png'
+// import testimage1 from '/Images/testimage1.png'
+// import testimage2 from '/Images/testimage2.png'
+// import testimage3 from '/Images/testimage3.png'
 
 const Tabs = () => { 
     const [activeIndex, setActiveIndex] = useState(1);
@@ -27,10 +27,10 @@ const Tabs = () => {
       </div>    
       <div className="panels">
         <div className={`panel ${checkActive(1, "active")}`}>
-          <img className={`tab_image`}src={testimage1} alt="testimage1" />
+          <img className={`tab_image`} src='/Images/testimage1.png' alt="testimage1" />
         </div>
         <div className={`panel ${checkActive(2, "active")}`}>
-          <img className={`tab_image`}src={testimage2} alt="testimage2" />
+          <img className={`tab_image`} src='/Images/testimage2.png' alt="testimage2" />
         </div>
       </div>  
     </>

@@ -13,37 +13,27 @@ const Genre = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState();
   const {genre} = useParams();
+  const GENRE = genre.charAt(0).toUpperCase() + genre.slice(1);
   useEffect(() => {
-    const fetchMeals = async () => {
-      const response = await fetch(
-        "https://gachashop-f35b8-default-rtdb.asia-southeast1.firebasedatabase.app/AvailableGenres.json"
-      );
-
-      if (!response.ok) {
-        throw new Error("Something went wrong");
+    const sendRequest = async() => {
+      setIsLoading(true);
+      try{
+        const response = await fetch(`http://localhost:4000/api/genres/${GENRE}`);
+        const responseData = await response.json();
+        if(!response.ok){
+          throw new Error(responseData.message);
+        }
+        setAvailableGames(responseData.games);
+      }catch(err){
+        setError(err.message);
       }
-      const responseData = await response.json();
-
-      // const loadedGames = [];
-      const genresMap = {};
-      for (const key in responseData) {
-        genresMap[responseData[key].genre] = [...responseData[key].games];
-      }
-
-      if (!genresMap[genre]) {
-        setError("No available games");
-      } else {
-        setAvailableGames(genresMap[genre]);
-      }
-
       setIsLoading(false);
-    };
+      
+    }
+    sendRequest();
+    
+  }, [GENRE]);
 
-    fetchMeals().catch((error) => {
-      setIsLoading(false);
-      setError(error.message);
-    });
-  }, [genre]);
 
   if (isLoading) {
     return (
@@ -73,13 +63,13 @@ const Genre = () => {
             <h2 className={classes.genre_header}>GENRE: {genre} </h2>
           </div>
           <div className={classes.genre_content}>
-            {availableGames.map((game) => (
+            {availableGames.map((game, key) => (
               <GameCard
-                key={game.id}
-                id={game.id}
+                key={key}
+                id={game._id}
                 img={game.image_url}
                 game_name={game.game_name}
-                genre={genre}
+                genre={game.genre}
                 price={game.price.toFixed(2)}
               />
             ))}
@@ -92,56 +82,3 @@ const Genre = () => {
 
 export default Genre;
 
-// const { genre } = useParams();
-
-//   const [games, setGames] = useState();
-
-//   useEffect(() => {
-//     // Simulate data coming back from backend
-//     const GAMES_FROM_BACKEND = {
-//       action: [
-//         {
-//           gameName: 'Epic 7',
-//           gameGenre: 'Action',
-//         },
-//       ],
-//       adventure: [],
-//       openworld: [],
-//       puzzle: [],
-//       rpg: [
-//         {
-//           gameName: 'MapleStory',
-//           gameGenre: 'RPG',
-//         },
-//       ],
-//       towerdefense: [],
-//       visualnovel: [],
-//     };
-//     setGames(GAMES_FROM_BACKEND[genre.toLowerCase()]);
-//   }, [genre]);
-
-//   if (!games) {
-//     return <div>Url error....</div>;
-//   }
-
-//   return (
-//     <div className={classes.parent}>
-//       <div className={classes.firstChild}>
-//         <GenreList />
-//       </div>
-//       <div className={classes.secondChild}>
-//         <div className={classes.genre_type}>
-//           <h2 className={classes.genre_header}>GENRE: {genre.toUpperCase()}</h2>
-//         </div>
-//         <div className={classes.genre_content}>
-//           {games.map((game, idx) => (
-//             <GameCard
-//               key={idx}
-//               gameName={game.gameName}
-//               gameGenre={game.gameGenre}
-//             />
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );

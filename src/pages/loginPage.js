@@ -4,8 +4,9 @@ import Button from "../components/UI/Button";
 import Card from "../components/UI/Card";
 import ErrorModal from "../components/UI/ErrorModal";
 import AuthContext from "../store/AuthContext";
+import Cookies from "js-cookie";
 
-import classes from "../css/LoginPage.module.css";
+import classes from "../css/loginPage.module.css";
 
 const LoginPage = (props) => {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ const LoginPage = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   const userHandleChange = (e) => {
     setUsername(e.target.value);
@@ -22,8 +24,45 @@ const LoginPage = (props) => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const errorHandler = () => {
+    setError(null);
+  };
+
+  const handleLogin = async (e) => {
     e.preventDefault();
+
+    try {
+      setIsLoading(true);
+      const response = await fetch("http://localhost:4000/api/users/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        }),
+      });
+      const responseData = await response.json();
+
+      if (!response.ok) {
+        setError({
+          title: "Login Failed",
+          message: "Wrong credentials, please try again",
+        });
+        return;
+      } else {
+        const token = responseData.token;
+        localStorage.setItem('token', token);
+        authCtx.onLogin();
+        navigate("/mainpage");
+      }
+      setIsLoading(false);
+    } catch (err) {
+      setIsLoading(false);
+      setError(err.message || "Something went wrong, please try again.");
+    }
+
     if (username.trim().length === 0) {
       setError({
         title: "All fields must be entered",
@@ -43,18 +82,12 @@ const LoginPage = (props) => {
       authCtx.onLogin();
       authCtx.checkAdmin();
       navigate("/mainpage");
-    } else {
-      authCtx.onLogin();
-      navigate("/mainpage");
     }
-
-    // do authrization check
-    // if success-> change state + redirect
-    // if fail, throw error
   };
 
-  const errorHandler = () => {
-    setError(null);
+  const handleRegister = (e) => {
+    e.preventDefault();
+    navigate("/register");
   };
 
   return (
@@ -68,22 +101,20 @@ const LoginPage = (props) => {
       )}
       <Card className={classes.input}>
         <form>
-          <label htmlFor="Username" value={username}>
-            Username:
-          </label>
-          <input type="text" onChange={userHandleChange}></input>
-          <label htmlFor="Password">Password:</label>
+          <label htmlFor="Username">Username:</label>
           <input
-            type="password"
-            onChange={pwHandleChange}
-            value={password}
+            type="text"
+            onChange={userHandleChange}
+            value={username}
           ></input>
-          <Link to="/login">
-            <Button type="submit" onClick={handleSubmit}>
-              Login
-            </Button>
-          </Link>
-          <Button>Register</Button>
+          <label htmlFor="Password">Password:</label>
+          <input type="password" onChange={pwHandleChange} value={password} />
+          <Button type="submit" onClick={handleLogin}>
+            Login
+          </Button>
+          <Button type="submit" onClick={handleRegister}>
+            Register
+          </Button>
         </form>
       </Card>
     </Fragment>

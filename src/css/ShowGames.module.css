@@ -1,0 +1,14 @@
+ul li{
+    padding: 1rem;
+}
+
+ul{
+    height: 50%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+h1{
+    text-align: left;
+    margin-left: 1rem;
+}

@@ -1,8 +1,5 @@
 import classes from "../css/MainPage.module.css";
 import Tabs from "../components/Tab";
-import testimage4 from "../Images/testimage4.png";
-import testimage5 from "../Images/testimage5.png";
-import testimage6 from "../Images/testimage6.png";
 import GenreList from "../components/GenreList";
 import Cart from "../components/Cart/Cart";
 import Header from "../components/Layout/Header";
@@ -33,21 +30,21 @@ function MainPage() {
           <div className={classes.bottom_firstchild}>
             <img
               className={classes.product_image}
-              src={testimage4}
+              src='/Images/testimage4.png'
               alt="testimage4"
             />
           </div>
           <div className={classes.bottom_secondchild}>
             <img
               className={classes.product_image}
-              src={testimage5}
+              src='/Images/testimage5.png'
               alt="testimage5"
             />
           </div>
           <div className={classes.bottom_thirdchild}>
             <img
               className={classes.product_image}
-              src={testimage6}
+              src='/Images/testimage6.png'
               alt="testimage6"
             />
           </div>
