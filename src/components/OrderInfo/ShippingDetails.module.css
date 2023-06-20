@@ -1,0 +1,10 @@
+.shippingDetails{
+    border: 1px solid black;
+    position: sticky;   
+    width: 32vw;
+    height: 40vh;
+    padding: 2vh 2vw;
+    top: 0;
+    margin: 2vh 2vw;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}

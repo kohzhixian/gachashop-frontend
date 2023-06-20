@@ -4,6 +4,7 @@ import CartContext from "../../store/CartContext";
 
 import classes from "./Cart.module.css";
 import CartItem from "./CartItem";
+import { useNavigate } from "react-router-dom";
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
@@ -34,6 +35,14 @@ const Cart = (props) => {
       })}
     </ul>
   );
+
+  const navigate = useNavigate();
+
+  const handleOrder = e => {
+    e.preventDefault();
+    navigate("/orderInfo");
+    cartCtx.closeCart();
+  }
   return (
     <CartModal onClose={cartCtx.closeCart}>
       {cartItems}
@@ -45,7 +54,7 @@ const Cart = (props) => {
         <button className={classes["button--alt"]} onClick={cartCtx.closeCart}>
           Close
         </button>
-        {hasItems && <button className={classes.button}>Order</button>}
+        {hasItems && <button className={classes.button} onClick={handleOrder}>Order</button>}
       </div>
     </CartModal>
   );

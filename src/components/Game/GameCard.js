@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import CartContext from "../../store/CartContext";
-import AddGameForm from "./AddGameForm";
+import AddGameForm from "./AddGameToCart";
 import classes from "./GameCard.module.css";
 
 const GameCard = (props) => {
   const cartCtx = useContext(CartContext);
+
+  // const price = `$${props.price.toFixed(2)}`;
   const addToCartHandler = amount => {
     cartCtx.addItem({
       id: props.id,

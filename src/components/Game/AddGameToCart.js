@@ -24,7 +24,7 @@ const AddGameForm = (props) => {
     <form className={classes.adding_game_div} onSubmit={submitHandler}>
       <Input
         ref={amountInputRef}
-        label="Amount"
+        label="Amount: "
         input={{
           id: "amount",
           type: "number",

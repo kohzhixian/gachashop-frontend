@@ -48,8 +48,8 @@
 }
 
 .shoppingIcons{
-    width: 30%;
-    text-align: center;
+    width: 40%;
+    float: right;
 }
 
 .genre_link{

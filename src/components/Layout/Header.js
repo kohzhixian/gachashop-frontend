@@ -14,10 +14,8 @@ const Header = (props) => {
         <div className={classes.logo}>GACHASHOP</div>
         <div className={classes.search_container}>
           <div className={classes.search_bar}>
-            <input type="text" placeholder="Search..."></input>
           </div>
           <div className={classes.search_button}>
-            <FaSearch size={35} />
           </div>
           <div className={classes.msg_icons}>
             <div className={classes.welcomeMsg}>WELCOME NAME</div>

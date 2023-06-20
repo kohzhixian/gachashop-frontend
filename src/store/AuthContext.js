@@ -19,6 +19,7 @@ export const AuthContextProvider = (props) => {
   const setLogoutHandler = () => {
     setIsLoggedIn(false);
     setIsAdmin(false);
+    localStorage.removeItem('token');
   };
 
   const setAdminHandler = () => {

@@ -1,0 +1,23 @@
+.bodyContent{
+    background-color: rgba(200, 200, 200, 0.5);
+    display: flex;
+    justify-content: space-around;
+}
+.cartDetails{
+    border: 1px solid black;
+    width: 40vw;
+    margin: 2vh 8vw;
+    padding: 2em;
+}
+
+.menuItem{
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    margin: 2vh 2vw;
+
+}
+
+.orderItems_ul {
+    height: 100%;
+    overflow-y: hidden;
+}

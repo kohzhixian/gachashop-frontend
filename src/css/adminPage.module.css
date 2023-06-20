@@ -1,0 +1,44 @@
+.adminPage{
+    display: flex;
+    flex-direction: column;
+}
+
+.topSection{
+    text-align: center;
+    height: 51vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.topLeft{
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.topRight{
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomSection{
+    text-align: center;
+    height: 47vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottomLeft{
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomRight{
+    width: 50vw;
+    margin-top: 10em;
+    justify-content: center;
+    align-items: center;
+}
+
